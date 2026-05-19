@@ -1,6 +1,6 @@
 # Engineering Dialectic Skill
 
-`engineering-dialectic` 是一个面向软件工程决策的 opencode Skill。它通过多个子代理代表不同工程立场进行辩证讨论，帮助主 Agent 在架构、实现、迁移、测试、可靠性和安全性等问题上形成可执行的最终方案。
+`engineering-dialectic` 是一个面向软件工程决策的 Agent Skill。它通过多个子代理代表不同工程立场进行辩证讨论，帮助主 Agent 在架构、实现、迁移、测试、可靠性和安全性等问题上形成可执行的最终方案。
 
 它不是传统辩论赛 Skill。目标不是让某一方赢，而是让方案在充分质疑和修正后达成共识；如果无法共识，则由主 Agent 在争论充分后裁判并输出工程决策。
 
@@ -86,10 +86,16 @@ issues/{topic_en}/dialectic_history.md
 
 ## 安装
 
-将本目录放到用户级 opencode Skill 路径：
+安装到用户级 `.agents/skills` 目录：
+
+```bash
+git clone https://github.com/kites262/engineering-dialectic ~/.agents/skills/engineering-dialectic/
+```
+
+最终目录应为：
 
 ```text
 ~/.agents/skills/engineering-dialectic/
 ```
 
-保存或更新 Skill 后，重启 opencode 使其重新加载。
+保存或更新 Skill 后，重启支持 `.agents/skills` 的 Agent 工具，使其重新加载 Skill。
